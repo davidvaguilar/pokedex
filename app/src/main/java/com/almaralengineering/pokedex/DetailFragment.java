@@ -1,9 +1,11 @@
 package com.almaralengineering.pokedex;
 
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +29,7 @@ public class DetailFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private ImageView detailImageView;
 
     private OnFragmentInteractionListener mListener;
 
@@ -66,9 +69,18 @@ public class DetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_detail, container, false);
 
-        ImageView detailImageView = (ImageView) view.findViewById(R.id.pokemon_detail_imageView);
+        detailImageView= (ImageView) view.findViewById(R.id.pokemon_detail_imageView);
 
         return view;
+    }
+
+    public void setPokemonImage(int pokemonImageId){
+        detailImageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), pokemonImageId));
+    }
+
+    public void playPokemonSound(int pokemonSoundId){
+        MediaPlayer mediaPlayer = MediaPlayer.create(getActivity(), pokemonSoundId);
+        mediaPlayer.start();
     }
 
     // TODO: Rename method, update argument and hook method into UI event

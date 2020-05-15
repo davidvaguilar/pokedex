@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/pokedex-fragments.iml" filepath="$PROJECT_DIR$/pokedex-fragments.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/pokedex-fragments-app.iml" filepath="$PROJECT_DIR$/app/pokedex-fragments-app.iml" />
     </modules>
   </component>
 </project>
